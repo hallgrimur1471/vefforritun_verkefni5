@@ -9,7 +9,7 @@ function splitIntoNumbers(values) {
 	str = str.filter(v=>v!='');
 	var numbers = [];
 	for (i = 0; i < str.length; i++) {
-		if (str[i].match(/^\d+$/)) {
+		if (str[i].match(/^0$|^-?[1-9]\d*(\.\d+)?$/)) {
 			numbers.push(Number(str[i]));
 		}
 	}

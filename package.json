@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.15.2",
+    "debug": "^2.2.0",
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {

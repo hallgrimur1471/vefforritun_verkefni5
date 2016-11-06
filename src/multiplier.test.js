@@ -5,10 +5,10 @@ const should = chai.should();
 
 describe('splitIntoNumbers', () => {
 	it('should split `numbers only` to numbers', () => {
-		multiplier.splitIntoNumbers('2, 1').should.eql([2, 1]);
+		multiplier.splitIntoNumbers('-1, 2, 1').should.eql([-1, 2, 1]);
 	});
 	it('should split `mixed numbers and characters` to numbers', () => {
-		multiplier.splitIntoNumbers('a, 1').should.eql([1]);
+		multiplier.splitIntoNumbers('a, 1, -1').should.eql([1, -1]);
 	});
 	it('should split `only characters` to []', () => {
 		multiplier.splitIntoNumbers('a, b').should.eql([]);

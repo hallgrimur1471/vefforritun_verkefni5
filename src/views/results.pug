@@ -1,16 +1,23 @@
 extends layout
 
 block content
-  h1 Niðurstöður margföldunnar
+  h1 Niðurstöður margföldunar
 
   p Þú slóst inn:
   p #{input}
-  p Úr því fundust tölurnar:
-  p #{foundNumbers}
-  p Margfeldið af þeim er:
-  p #{multiplicationResults}
-  p Þættir eru:
-  p #{factors}
+  if(foundNumbers.length === 0)
+    p Engin tala fannst.
+  else if (foundNumbers.length === 1)
+    p Úr því fannst talan:
+    p #{foundNumbers}
+    p Get ekki margfaldað eina tölu.
+  else
+    p Úr því fundust tölurnar:
+    p #{foundNumbers}
+    p Margfeldið af þeim er:
+    p #{multiplicationResults}
+    p Þættir margfeldisins eru:
+    p #{factors}
 
   hr
 
@@ -18,6 +25,6 @@ block content
 
   // multiplication form
   form(method='POST' action='/')
-    label(for='multiplicationbox') Tala eða tölur
+    label(for='multiplicationbox') Tala eða tölur:
     textarea#multiplicationbox.form-control(type='text', rows="5", name="multiplicationbox", placeholder="")
     button.btn.btn-primary(type='submit') Margfalda og finna þætti

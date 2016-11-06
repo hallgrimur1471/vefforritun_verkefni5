@@ -17,6 +17,8 @@ router.post('/', function(req, res, next) {
   console.log(multiplier.multiply([4, 4]));
 
   calculations(textboxInput, (result) => {
+      console.log(result.foundNumbers)
+      console.log(result.foundNumbers === [])
       res.render('results', {
         title: 'Niðurstöður margföldunnar',
         input: result.textboxInput,
@@ -34,7 +36,7 @@ function calculations(textboxInput, callback) {
 
   var calcResults = {
     textboxInput,
-    foundNumbers: numbers.toString(),
+    foundNumbers: numbers,
     multiplicationResults: mult.toString(),
     factors: factors.toString(),
   };
