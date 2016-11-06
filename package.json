@@ -10,6 +10,7 @@
     "coverage": "istanbul cover _mocha ./src/*.test.js -- -R dot"
   },
   "dependencies": {
+    "axios": "^0.15.2",
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {

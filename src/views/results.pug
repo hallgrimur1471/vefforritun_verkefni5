@@ -1,7 +1,20 @@
 extends layout
 
 block content
-  h1= title
+  h1 Niðurstöður margföldunnar
+
+  p Þú slóst inn:
+  p #{input}
+  p Úr því fundust tölurnar:
+  p #{foundNumbers}
+  p Margfeldið af þeim er:
+  p #{multiplicationResults}
+  p Þættir eru:
+  p #{factors}
+
+  hr
+
+  p Endurtaka leikinn:
 
   // multiplication form
   form(method='POST' action='/')
