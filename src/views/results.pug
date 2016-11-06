@@ -16,8 +16,11 @@ block content
     p #{foundNumbers}
     p Margfeldið af þeim er:
     p #{multiplicationResults}
-    p Þættir margfeldisins eru:
-    p #{factors}
+    if (multiplicationResults <= 0)
+      p Sú tala á sér enga þætti.
+    else
+      p Þættir margfeldisins eru:
+      p #{factors}
 
   hr
 

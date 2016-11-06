@@ -1,9 +1,2 @@
-.red{
-   color: red;
-}
-.thick{
-   font-size:20px;
-}
-.green{
-   color:green;
-}
+label {display:block;}
+textarea { display:block;}
